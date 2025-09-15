@@ -1,13 +1,21 @@
 import React from 'react'
 import { useTheme } from '../context/ThemeProvider';
+import ContrastRoundedIcon from '@mui/icons-material/ContrastRounded';
+import { Button } from '@mui/material';
 
-const Header = () => {
-  const { isDark, toggleTheme } = useTheme();
+const Header:React.FC = () => {
+    const {toggleTheme } = useTheme();
 
     return (
-        <div>      <button onClick={toggleTheme}>change theme</button>
-            <h1 className="text-2xl text-[var(--color-primary)] font-black p-3">Quiz <span className="text-[var(--color-secondary)]">Time</span></h1>
-            <p>{isDark ? "dark" : "light"}</p>
+        <div className='mb-5 pb-3 flex items-center justify-between border-b border-[varvar(--color-secondary)]'>
+            <div>
+                <h1 className="text-[var(--color-primary)]">Quiz <span className="text-[var(--color-secondary)]">Time</span></h1>
+            </div>
+            <div>
+                <Button onClick={toggleTheme}>
+                    <ContrastRoundedIcon/>
+                </Button>
+            </div>
         </div>
     )
 }

@@ -4,8 +4,10 @@
     --color-bg: #fffbef;
     --color-primary: #213448;
     --color-primary-hover: #213848;
-    --color-secondary: #ffb20c;
+    --color-secondary: #ffae00;
     --color-secondary-hover: #f3a600;
+
+    --color-text:#fff8f0;
 }
 
 .dark {
@@ -14,6 +16,8 @@
     --color-primary-hover: #fcf4dc;
     --color-secondary: #ffb20c;
     --color-secondary-hover: #f3a600;
+    
+    --color-text:#213448;
 }
 
 @layer base {
@@ -21,5 +25,8 @@
         transition: all 200ms ease-in-out;
         background-color: var(--color-bg);
         color: var(--color-primary);
+    }
+    h1{
+        @apply text-xl lg:text-3xl font-bold;
     }
 }
