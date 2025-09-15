@@ -1,13 +1,14 @@
-import { useTheme } from "./context/ThemeProvider"
+import { Route, Routes } from "react-router-dom"
+import Layout from "./layouts/Layout"
+import Home from "./pages/Home"
 
 function App() {
-  const { isDark, toggleTheme } = useTheme();
   return (
-    <>
-      <button onClick={toggleTheme}>change theme</button>
-      <h1 className="text-2xl text-[var(--color-primary)] font-black p-3">Quiz <span className="text-[var(--color-secondary)]">Time</span></h1>
-      <p>{isDark ? "dark" : "light"}</p>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout/>}>
+        <Route index element={<Home/>}/>
+      </Route>
+    </Routes>
   )
 }
 
