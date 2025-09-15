@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+:root {
+    --color-bg: #fffbef;
+    --color-primary: #213448;
+    --color-primary-hover: #213848;
+    --color-secondary: #ffb20c;
+    --color-secondary-hover: #f3a600;
+}
+
+.dark {
+    --color-bg: #213448;
+    --color-primary: #fffbef;
+    --color-primary-hover: #fcf4dc;
+    --color-secondary: #ffb20c;
+    --color-secondary-hover: #f3a600;
+}
+
+@layer base {
+    body {
+        transition: all 200ms ease-in-out;
+        background-color: var(--color-bg);
+    }
+}
